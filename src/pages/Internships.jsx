@@ -11,7 +11,7 @@ function Internships() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/opportunities/type/Internship")
+    fetch("https://campus-career-backend-hibf.onrender.com/api/opportunities/type/Internship")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to load internships");

@@ -31,8 +31,8 @@ function Dashboard() {
       setUser(parsedUser);
 
       Promise.all([
-        fetch("http://localhost:8080/api/opportunities"),
-        fetch("http://localhost:8080/api/applications"),
+        fetch("https://campus-career-backend-hibf.onrender.com/api/opportunities"),
+        fetch("https://campus-career-backend-hibf.onrender.com/api/applications"),
       ])
         .then(async ([opportunityResponse, applicationResponse]) => {
           if (!opportunityResponse.ok || !applicationResponse.ok) {

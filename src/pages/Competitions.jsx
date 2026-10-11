@@ -11,7 +11,7 @@ function Competitions() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/opportunities/type/Competition")
+    fetch("https://campus-career-backend-hibf.onrender.com/api/opportunities/type/Competition")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to load competitions");

@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:8080/api/opportunities";
-const APPLICATIONS_URL = "http://localhost:8080/api/applications";
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/opportunities`;
+const APPLICATIONS_URL = `${import.meta.env.VITE_API_BASE_URL}/api/applications`;
 
 const emptyForm = {
   title: "",
@@ -32,6 +32,7 @@ function AdminDashboard() {
 
   const loadOpportunities = async () => {
     setLoading(true);
+    setError("");
 
     try {
       const response = await fetch(API_URL);
@@ -238,7 +239,8 @@ function AdminDashboard() {
             placeholder="Enter opportunity title"
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <label>Type</label>
           <br />
@@ -252,7 +254,8 @@ function AdminDashboard() {
             <option value="Hackathon">Hackathon</option>
             <option value="Competition">Competition</option>
           </select>
-          <br /><br />
+          <br />
+          <br />
 
           <label>Organization</label>
           <br />
@@ -263,7 +266,8 @@ function AdminDashboard() {
             placeholder="Enter organization"
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <label>Location</label>
           <br />
@@ -274,7 +278,8 @@ function AdminDashboard() {
             placeholder="Enter location"
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <label>Mode</label>
           <br />
@@ -288,7 +293,8 @@ function AdminDashboard() {
             <option value="On-site">On-site</option>
             <option value="Hybrid">Hybrid</option>
           </select>
-          <br /><br />
+          <br />
+          <br />
 
           <label>Duration</label>
           <br />
@@ -299,7 +305,8 @@ function AdminDashboard() {
             placeholder="Example: 3 Months"
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <label>Eligibility</label>
           <br />
@@ -310,7 +317,8 @@ function AdminDashboard() {
             placeholder="Who can apply?"
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <label>Deadline</label>
           <br />
@@ -321,7 +329,8 @@ function AdminDashboard() {
             placeholder="Example: 30 October 2026"
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <label>Description</label>
           <br />
@@ -333,7 +342,8 @@ function AdminDashboard() {
             rows={5}
             required
           />
-          <br /><br />
+          <br />
+          <br />
 
           <button type="submit" disabled={saving}>
             {saving

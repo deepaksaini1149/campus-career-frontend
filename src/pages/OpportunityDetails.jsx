@@ -7,7 +7,7 @@ function OpportunityDetails() {
   const [opportunity, setOpportunity] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/opportunities/${id}`)
+    fetch(`https://campus-career-backend-hibf.onrender.com/api/opportunities/${id}`)
       .then(response => response.json())
       .then(data => {
         setOpportunity(data);

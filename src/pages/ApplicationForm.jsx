@@ -114,7 +114,7 @@ function ApplicationForm() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/applications",
+        "https://campus-career-backend-hibf.onrender.com/api/applications",
         {
           method: "POST",
           headers: {
